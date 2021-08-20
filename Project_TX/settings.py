@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#5$p%s^&=_1_97&n6ptcgml9-y9*^-gfj_p-qkbtj*x(9m*h)g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
@@ -76,12 +76,8 @@ WSGI_APPLICATION = 'Project_TX.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Analisis_Impacto_TX',
-        'USER': 'djangoadmin',
-        'PASSWORD': 'Kr210315%',
-        'HOST': '168.197.70.203',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
